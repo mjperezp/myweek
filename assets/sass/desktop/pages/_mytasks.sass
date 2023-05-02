@@ -1,0 +1,240 @@
+.tasks
+    padding: 
+        top: $gap--xxl
+        bottom: $gap--l
+    box-sizing: border-box
+    height: 100vh
+
+// Perfil
+
+.perfil
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    align-items: end
+    justify-content: space-between
+    justify-items: stretch
+
+.perfil--title 
+    color: $color--black
+
+    &-dark
+        color: $color--white
+
+
+.fecha
+    color: $color--purple
+
+    &-dark
+        color: $color--blue
+
+.dot
+    color: $color--purple
+
+    &-dark
+        color: $color--blue
+
+.delete--area
+    display: flex
+    justify-content: flex-end
+
+.button-clear--container
+    $padding--delete--buttons: 1.3rem
+    margin-bottom: $gap--xs
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    border-radius: $border--radius--l
+    width: fit-content
+    padding: 
+        left: $padding--delete--buttons
+        top: $gap--s
+        bottom: $gap--s
+    transition: .3s
+
+.button-clear--container:hover button 
+    display: block
+    
+
+
+.clear--button
+    border: none
+    padding: 
+        right: $gap--m
+    box-sizing: border-box
+    color: $color--peach
+    letter-spacing: .3px
+    cursor: pointer
+    border-right: .5px solid $color--grey
+    margin-left: 8px
+
+    &-done
+        border: none
+        margin-left: $gap--s
+        cursor: pointer
+        box-sizing: border-box
+
+        &-dark
+        color: $color--peach
+
+    &-dark
+        color: $color--peach
+
+    &:hover
+        color: $color--peach
+
+.done-tasks-icon
+    font-size: 20px
+
+    &-dark
+    color: $color--grey
+
+// Fin del perfil
+
+// Añadir tarea
+
+.agregar-tarea
+    background-color: $color--grey--super--light
+    border-radius: $border--radius--m
+    height: $gap--l
+    display: flex
+    align-items: center
+    gap: $gap--s
+    padding: 
+        left: $gap--m
+        right: $gap--m
+    margin-bottom: $gap--l
+
+    &-dark
+        background-color: $color--grey--extra--dark
+
+.agregar-tarea input
+    width: 100%
+    height: 100%
+
+    &:focus
+        outline: none
+        color: $color--black
+    
+    &::placeholder
+        font-size: 1rem
+
+.input--dark
+    width: 100%
+    height: 100%
+    background-color: $color--grey--extra--dark
+
+.agregar-tarea-input
+
+    &-dark
+        background-color: $color--grey--extra--dark
+        caret-color: $color--white
+
+        
+.agregar-tarea i
+    color: $color--purple
+    font-size: 18px
+
+    &:hover
+        transform: scale(1.2)
+        transition: .3s
+        cursor: pointer
+
+
+// Fin añadir tarea
+
+// Sección tarea
+
+.seccion-tarea li 
+    display: grid
+    grid-template-columns: 2rem 1fr $gap--s
+    align-items: center
+    box-shadow: 
+    border-radius: $border--radius--m
+    padding: 
+        top: $gap--m
+        bottom: $gap--m
+        left: $gap--m
+        right: $gap--m
+    margin-bottom: $gap--m
+    box-shadow: $task--shadow
+    box-sizing: border-box
+
+.ul--dark li
+    background-color: $color--dark--li
+
+.seccion-tarea ul
+    margin-top: $gap--m
+    box-sizing: border-box
+    overflow-y: overlay
+    height: 100% ///revisar ese scroll
+
+.seccion-tarea i
+    color: $color--purple
+    cursor: pointer
+
+.i--dark
+    color: $color--blue
+
+.delete--task
+
+    &:hover
+        color: $color--red
+
+.line-through
+    color: $color--grey
+    text-decoration: line-through
+
+    &--dark
+        color: $color--grey--super--light
+
+// Fin sección tarea
+
+
+.li--empty
+    grid-column: 1 / 3
+    
+.text--empty
+    padding:
+        top: $gap--m
+        bottom: $gap--m
+
+.hidden
+    display: none
+
+
+// Modo claro - modo oscuro
+
+.theme--container
+    position: absolute
+    top: $gap--l
+    right: $gap--l
+    z-index: 3
+
+.input--theme
+    position: absolute
+    top: $gap--l
+    right: $gap--l
+    display: none
+
+.toggle
+    cursor: pointer
+    position: relative
+    display: flex
+    justify-content: space-between
+    height: 60px
+
+.bi-moon
+    font-size: $gap--m
+
+    &:hover
+        color: $color--blue
+        scale: 1.1
+        transition: .3s
+
+.bi-brightness-high 
+    font-size: $gap--m
+
+    &:hover
+        color: $color--yellow
+        scale: 1.1
+        transition: .3s

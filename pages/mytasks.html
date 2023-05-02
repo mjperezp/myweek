@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myweek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../assets/css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="../assets/css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+    <!-- Iconos bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- JS file -->
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <main class="container--main tasks">
+        <section class="perfil">
+            <article>
+                <div id="fecha" class="fecha text--bold text--subtitle text--padding"></div>
+                <h1 class="text--title">Hola, María<span class="text--title dot">.</span></h1>
+                <p class="text--subtitle text--grey text--bold text--padding">Este es tu espacio personal</p>
+            </article>
+            <!-- Botones vaciar y borrar tareas-->
+            <div class="delete--area">
+                <div class="button-clear--container hidden">
+                    <i class="bi bi-trash3 done-tasks-icon"></i>
+                    <button type="button" id="clear-all-tasks" class="clear--button hidden">Todas</button>
+                    <button type="button" id="clear-tasks-done" class="clear--button-done hidden">Tareas realizadas</button>
+                </div>
+            </div>
+            <!-- Botones modo claro modo oscuro -->
+            <input type="checkbox" id="toggle-theme" class="input--theme">
+            <div class="theme--container">
+                <label class="toggle" for="toggle">
+                    <i id="theme-icon" class="bi bi-moon"></i>
+                </label>
+            </div>
+        </section>
+        <div class="agregar-tarea" id="div-agregar-tarea">
+            <input class="agregar-tarea-input" type="text" id="input" placeholder="Añade una tarea">
+            <i id="boton-enter" class="bi bi-plus-lg boton-enter"></i>
+        </div>
+        <div class="seccion-tarea">
+            <ul id="lista"></ul>
+        </div>
+    </main>
+</body>
+</html>

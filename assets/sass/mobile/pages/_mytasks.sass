@@ -1,0 +1,210 @@
+.tasks
+    padding: 
+        top: $gap--m
+        bottom: $gap--l
+    box-sizing: border-box
+    height: 100vh
+
+// Perfil
+
+.perfil--title 
+    color: $color--black
+
+.fecha
+    color: $color--purple
+
+.dot
+    color: $color--purple
+
+    &-dark
+        color: $color--blue
+
+.delete--area
+    display: flex
+    justify-content: flex-end
+
+.button-clear--container
+    $padding--delete--buttons: 1.3rem
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    border-radius: $border--radius--l
+    width: fit-content
+    padding: 
+        left: $padding--delete--buttons
+        top: $gap--s
+
+.button-clear--container:hover button 
+    display: block
+
+.clear--button
+    border: none
+    padding: 
+        right: $gap--m
+        left: $gap--s
+    box-sizing: border-box
+    color: $color--peach
+    letter-spacing: .3px
+    cursor: pointer
+    border-right: .5px solid $color--grey--extra--dark
+    margin-left: 8px
+
+    &:hover
+        color: $color--peach
+
+    &-done
+        border: none
+        margin-left: $gap--s
+        cursor: pointer
+        box-sizing: border-box
+
+        &:hover
+            color: $color--peach
+
+.done-tasks-icon
+    font-size: 20px
+
+    &-dark
+        color: $color--grey
+
+// Fin del perfil
+
+// Añadir tarea
+
+.agregar-tarea
+    background-color: $color--grey--super--light
+    border-radius: $border--radius--m
+    height: $gap--l
+    display: flex
+    align-items: center
+    gap: $gap--s
+    padding: 
+        left: $gap--m
+        right: $gap--m
+    margin-top: $gap--s
+
+    &-dark
+        background-color: $color--grey--extra--dark
+
+.agregar-tarea input
+    width: 100%
+    height: 100% 
+
+    &:focus
+        outline: none
+        color: $color--black
+    
+    &::placeholder
+        font-size: .9rem
+
+.input--dark
+    width: 100%
+    height: 100%
+    background-color: $color--grey--extra--dark
+
+.agregar-tarea-input
+    
+    &-dark
+        caret-color: $color--white
+        background-color: $color--grey--extra--dark
+        
+.agregar-tarea i
+    color: $color--purple
+    font-size: 18px
+
+    &:hover
+        transform: scale(1.2)
+        transition: .3s
+        cursor: pointer
+
+// Fin añadir tarea
+
+// Sección tarea
+
+.seccion-tarea li 
+    display: grid
+    grid-template-columns: 2rem 1fr $gap--s
+    align-items: center
+    box-shadow: 
+    border-radius: $border--radius--m
+    padding: 
+        top: $gap--m
+        bottom: $gap--m
+        left: $gap--m
+        right: $gap--m
+    margin-bottom: $gap--m
+    box-shadow: $task--shadow
+    box-sizing: border-box
+
+.ul--dark li
+    background-color: $color--dark--li
+
+.seccion-tarea ul
+    margin-top: $gap--m
+    box-sizing: border-box
+    overflow-y: overlay
+    height: 100% ///revisar ese scroll
+
+.seccion-tarea i
+    color: $color--purple
+    cursor: pointer
+
+.delete--task
+
+    &:hover
+        color: $color--red
+
+.line-through
+    color: $color--grey
+    text-decoration: line-through
+
+// Fin sección tarea
+
+
+.li--empty
+    grid-column: 1 / 3
+    
+.text--empty
+    padding:
+        top: $gap--m
+        bottom: $gap--m
+
+.hidden
+    display: none
+
+
+// Modo claro - modo oscuro
+
+.theme--container
+    position: absolute
+    top: $gap--l
+    right: 0
+
+.input--theme
+    position: absolute
+    top: $gap--l
+    right: $gap--l
+    display: none
+
+.toggle
+    cursor: pointer
+    display: flex
+    justify-content: flex-start
+    width: 40px
+
+.bi-moon
+    font-size: $gap--m
+
+    &:hover
+        color: $color--blue
+        scale: 1.1
+        transition: .3s
+
+.bi-brightness-high 
+    font-size: $gap--m
+
+    &:hover
+        color: $color--yellow
+        scale: 1.1
+        transition: .3s
+

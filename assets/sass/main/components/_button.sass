@@ -1,0 +1,67 @@
+.button
+    padding: 
+        top: $gap--xs
+        bottom: $gap--xs
+        left: $gap--m
+        right: $gap--m
+
+    &--call-action--form
+        background-color: $color--purple
+        border-radius: $border--radius--l
+        color: $color--white
+        display: flex
+        justify-content: center
+        align-items: center
+        height: $gap--l
+        box-sizing: border-box
+        width: $gap--xxxl
+
+        @media screen and (max-width: $breakpoint--mobile-m)
+            $button--mobile--size: 2.6rem
+            height: $button--mobile--size
+            width: 100%
+
+        &:hover
+            opacity: .9
+        
+    &--secondary
+        border: $border--thick $color--purple
+        border-radius: $border--radius--l
+        color: $color--purple
+
+        &:hover
+            background-color: $color--purple
+            color: white
+            transition: .3s
+    
+        @media screen and (max-width: $breakpoint--mobile-m)
+            padding: 
+                top: $gap--xxs
+                bottom: $gap--xxs
+                left: $gap--s
+                right: $gap--s
+
+
+// Botón input añadir nueva tarea
+
+.button--add--new-task
+    position: relative
+    background-color: $color--purple
+    display: flex
+    justify-content: center
+    align-items: center
+    height: $gap--l
+    width: $gap--l
+    border-radius: 0 $border--radius--m $border--radius--m 0
+
+    &::before, &::after
+        content: ""
+        position: absolute
+        width: $gap--xs
+        height: 2px
+        background-color: $color--white
+        border-radius: 4px
+    
+    &::before
+        transform: rotate(90deg)
+

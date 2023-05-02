@@ -1,0 +1,53 @@
+.login
+    padding: 
+        top: $gap--s
+        bottom: $gap--s
+    box-sizing: border-box
+    height: 100vh
+
+    &--content
+        height: 90vh
+        box-sizing: border-box
+        display: grid
+        justify-items: center
+        align-items: stretch
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(2, 1fr)
+
+        &--all
+            width: 100%
+            padding: $gap--m
+            box-sizing: border-box
+            display: grid
+            gap: $gap--s
+
+        &--form
+            display: grid
+            gap: $gap--m
+
+    &--image
+        display: none
+
+    &--form
+        padding-top: $gap--xs
+        width: 100%
+        display: grid
+        gap: $gap--s
+
+        &--button--content
+            display: grid
+            justify-content: start
+
+    &--input
+        $input--mobile--size: 2.6rem
+        background-color: $color--grey--extra--light
+        border-radius: $border--radius--m
+        padding: $gap--s
+        box-sizing: border-box
+        color: $color--black
+        height: $input--mobile--size
+
+        &:focus
+            outline: $border--thin $color--purple
+            color: $color--black
+

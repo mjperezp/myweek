@@ -1,0 +1,40 @@
+body
+    font-family: text
+    font-size: 1rem
+    font-weight: 400
+    color: $color--black
+    background-color: $color--white
+
+    @media screen and (max-width: $breakpoint--mobile-m)
+        font-size: .9rem
+
+.body-dark
+    color: $color--white
+    background-color: $color--black
+
+.container--main, .container--small
+    margin:
+        left: auto
+        right: auto
+    padding:
+        left: $gap--l
+        right: $gap--l
+
+    @media screen and (max-width: $breakpoint--m)
+        padding:
+            left: $gap--m
+            right: $gap--m
+
+    @media screen and (max-width: $breakpoint--mobile-m)
+        padding:
+            left: $gap--s
+            right: $gap--s
+
+.container--main
+    max-width: $breakpoint--desktop-m
+
+.container--small
+    max-width: $breakpoint--m
+
+.height--100vh
+    height: 100vh

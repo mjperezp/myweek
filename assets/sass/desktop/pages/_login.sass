@@ -1,0 +1,58 @@
+.login
+    padding: 
+        top: $gap--xxl
+        bottom: $gap--l
+    box-sizing: border-box
+    height: 100vh
+
+    &--content
+        height: 80%
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        align-items: center
+        justify-items: center
+
+        &--all
+            width: 100%
+            padding: 
+                top: $gap--m
+                right: $gap--m
+                bottom: $gap--m
+            box-sizing: border-box
+            display: grid
+            gap: $gap--s
+
+        &--form
+            display: grid
+            gap: $gap--m
+
+    &--image
+        $login--img--size: 18rem
+        width: $login--img--size
+        position: absolute
+        bottom: 0
+        //transform: rotate(180deg)
+        right: $gap--xxl
+
+    &--form
+        padding-top: $gap--m
+        width: 100%
+        display: grid
+        gap: $gap--s
+
+        &--button--content
+            display: grid
+            justify-content: start
+
+    &--input
+        background-color: $color--grey--extra--light
+        border-radius: $border--radius--m
+        padding: $gap--s
+        box-sizing: border-box
+        color: $color--black
+        height: $gap--l
+
+        &:focus
+            outline: $border--thin $color--purple
+            color: $color--black
+
